@@ -5,6 +5,7 @@ import tempfile
 import json
 import zipfile
 import io
+import torch
 import pandas as pd
 from PIL import Image
 
@@ -24,7 +25,10 @@ except ImportError as e:
 # ================= Config =================
 DET_MODEL = "pubtables1m_detection_detr_r18.pth"
 STR_MODEL = "TATR-v1.1-All-msft.pth"
-DEVICE = "cuda" # Change to "cpu" if no GPU is available
+if torch.cuda.is_available():
+    DEVICE = "cuda"
+else:
+    DEVICE = "cpu"
 # ==========================================
 
 st.set_page_config(page_title="PDF Table Extractor", layout="wide")
