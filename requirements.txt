@@ -1,0 +1,18 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==1.13.1
+torchvision==0.14.1
+numpy==1.24.2
+pandas==1.5.3
+scipy==1.10.1
+scikit-learn==1.2.1
+matplotlib==3.7.0
+Pillow==9.4.0
+scikit-image==0.20.0
+PyMuPDF==1.21.1
+pytesseract>=0.3.10
+streamlit>=1.20.0
+watchdog
+pycocotools==2.0.6
+editdistance==0.6.2
+tqdm==4.65.0
+Cython==0.29.33
